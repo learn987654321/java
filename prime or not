@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class CPrime
+{
+	int count=0,n;
+	int checkprime(int n)
+        {
+            for(int i=1; i < n/2; i++)
+            {
+                if(n%i == 0)
+                count++;
+            }
+            if(count <= 1)
+                return 0;
+            else
+                return 1;
+        }
+}
+
+class Prime
+{
+    public static void main(String args[])
+    {
+        CPrime c=new CPrime();
+
+        System.out.println("enter the number");
+        Scanner s=new Scanner(System.in);
+        int j=s.nextInt();
+
+        if(j==1)
+            System.out.println("the number is neither prime nor composite");
+        else
+        {
+            int res=c. checkprime( j);
+            if(res==0)
+                System.out.println("the number is a prime number");
+            else
+                System.out.println("the number is not a prime number");
+        }
+    }
+}
